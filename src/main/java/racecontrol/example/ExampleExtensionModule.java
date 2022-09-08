@@ -23,7 +23,7 @@ public class ExampleExtensionModule implements AppExtensionModule {
 
     @Override
     public ClientExtension getExtension() {
-        return null;
+        return new ExampleExtension();
     }
 
     @Override
