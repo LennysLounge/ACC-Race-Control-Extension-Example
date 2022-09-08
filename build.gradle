@@ -1,0 +1,33 @@
+plugins {
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+
+def distributionName = "ACC Race Control Example Extension"
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation group: 'org.leonard-schuengel', name:'acc-race-control', version:'1.0'
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'racecontrol.Main'
+}
+
+distributions{
+    main{
+        distributionBaseName = distributionName
+    }
+}
+
+run{
+    dependsOn installDist
+    workingDir new File(new File(buildDir, 'install'),distributionName)    
+    jvmArgs("-splash:data/loading.png")
+}
