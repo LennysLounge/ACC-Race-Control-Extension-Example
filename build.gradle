@@ -12,6 +12,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.processing:core:3.3.6'
     implementation group: 'org.leonard-schuengel', name:'acc-race-control', version:'1.0'
 }
 

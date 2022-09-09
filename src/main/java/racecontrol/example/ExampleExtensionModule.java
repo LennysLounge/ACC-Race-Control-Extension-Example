@@ -28,7 +28,7 @@ public class ExampleExtensionModule implements AppExtensionModule {
 
     @Override
     public PageController getPageController() {
-        return null;
+        return new ExamplePageControler();
     }
 
 }

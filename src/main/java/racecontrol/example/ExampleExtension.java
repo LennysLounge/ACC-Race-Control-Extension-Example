@@ -1,10 +1,11 @@
-package racecontrol.example;
-
 /*
  * Copyright (c) 2021 Leonard Schüngel
  * 
  * For licensing information see the included license (LICENSE.txt)
  */
+
+package racecontrol.example;
+
 import java.util.logging.Logger;
 import racecontrol.client.ClientExtension;
 import racecontrol.client.events.SessionPhaseChangedEvent;
